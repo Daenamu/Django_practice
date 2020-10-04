@@ -38,5 +38,5 @@ urlpatterns = [
          name='tagged_object_list'),
 
     # Example: /blog/search/
-    path('/search/', views.SearchFormView.as_view(), name='search'),
+    path('search/', views.SearchFormView.as_view(), name='search'),
 ]
