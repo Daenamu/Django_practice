@@ -1,7 +1,6 @@
 from django.contrib import admin
-from photo.models import Album, Photo
 
-# Register your models here.
+from photo.models import Album, Photo
 
 
 class PhotoInline(admin.StackedInline):
@@ -11,10 +10,11 @@ class PhotoInline(admin.StackedInline):
 
 @admin.register(Album)
 class AlbumAdmin(admin.ModelAdmin):
-    inlines = (PhotoInline, )
+    inlines = (PhotoInline,)
     list_display = ('id', 'name', 'description')
 
 
 @admin.register(Photo)
-class PhotoAlbum(admin.ModelAdmin):
+class PhotoAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'upload_dt')
+
